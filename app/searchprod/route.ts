@@ -23,6 +23,7 @@ export async function POST(request: Request) {
 
 		const html = await page.content(); //get the entire html content
 		const $ = cheerio.load(html); //load the html content
+		console.log(html)
 
 		const prices = $("span.a-offscreen")
 			.map((index, element) => {
